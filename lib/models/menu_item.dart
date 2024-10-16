@@ -1,15 +1,19 @@
+import "package:isar/isar.dart";
 
+part 'menu_item.g.dart';
 
+@collection
 class MenuItem {
-  final String name;
-  //final double price;
-  final String category;
-  //final String image;
+  Id id = Isar.autoIncrement;
+  late String name;
+  late String category;
 
-  MenuItem({
-    required this.name,
-   //required this.price,
-    required this.category,
-   //required this.image,
-  });
+  MenuItem({required this.name, required this.category});
+
+  factory MenuItem.fromJson(Map<String, dynamic> json){
+    return MenuItem(
+      name: json['name'],
+      category: json['category'],
+    );
+  }
 }

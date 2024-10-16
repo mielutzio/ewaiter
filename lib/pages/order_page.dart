@@ -39,7 +39,7 @@ class OrderPage extends StatelessWidget {
                   )),
               tileColor: Colors.grey[200],
               title: Text(
-                  "${categoriesProvider.menu[selectedItems.keys.toList()[index]]} ${selectedItems.keys.toList()[index]}"),
+                 "${categoriesProvider.menu.firstWhere((item) => item.name == selectedItems.keys.toList()[index]).category} ${selectedItems.keys.toList()[index]}"),
               trailing: Text(selectedItems.values.toList()[index].toString()),
             ),
           );

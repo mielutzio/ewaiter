@@ -28,7 +28,7 @@ class FiltersPage extends StatelessWidget {
               onTap: () {
                 categoriesProvider.setCategory(categories[index]);
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomePage()));
+                    MaterialPageRoute(builder: (context) => const ItemsPage()));
               },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
